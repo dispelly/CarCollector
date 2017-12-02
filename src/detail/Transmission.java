@@ -1,4 +1,4 @@
-package Detail;
+package detail;
 
 public class Transmission extends AbstractDetail {
     public Transmission(int detailPrice) {

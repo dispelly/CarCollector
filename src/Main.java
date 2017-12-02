@@ -1,7 +1,7 @@
-import Car.AbstractCar;
-import Detail.AbstractDetail;
-import Orders.CompletedOrder;
-import Orders.ReplaceOrder;
+import car.AbstractCar;
+import detail.AbstractDetail;
+import orders.CompletedOrder;
+import orders.ReplaceOrder;
 
 public class Main {
 

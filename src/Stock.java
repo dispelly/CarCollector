@@ -1,4 +1,4 @@
-import Detail.AbstractDetail;
+import detail.AbstractDetail;
 
 /**
  * @author VYZH

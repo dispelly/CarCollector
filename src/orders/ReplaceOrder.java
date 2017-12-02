@@ -1,7 +1,6 @@
-package Orders;
+package orders;
 
-import Car.AbstractCar;
-import Detail.AbstractDetail;
+import car.AbstractCar;
 
 public class ReplaceOrder extends AbstractOrder {
 

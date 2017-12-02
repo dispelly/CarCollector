@@ -1,6 +1,6 @@
-package Human;
+package human;
 
-public class AbstractHuman {
+public abstract class AbstractHuman {
     private String name;
     private int money;
 

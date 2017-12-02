@@ -1,8 +1,8 @@
-package Car;
+package car;
 
-import Detail.AbstractDetail;
+import detail.AbstractDetail;
 
-public class AbstractCar {
+public abstract class AbstractCar {
     private String model;
     private int detailNumber;
 

@@ -1,4 +1,4 @@
-package Car;
+package car;
 
 public class Hatchback extends AbstractCar {
     public Hatchback(int detailNumber) {

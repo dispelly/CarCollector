@@ -1,4 +1,4 @@
-package Human;
+package human;
 
 public class Workman extends AbstractHuman {
     private String experience;

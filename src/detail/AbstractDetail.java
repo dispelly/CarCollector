@@ -1,6 +1,6 @@
-package Detail;
+package detail;
 
-public class AbstractDetail {
+public abstract class AbstractDetail {
     private String detailName;
     private int detailPrice;
 

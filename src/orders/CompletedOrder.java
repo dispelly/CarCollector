@@ -1,6 +1,6 @@
-package Orders;
+package orders;
 
-import Car.AbstractCar;
+import car.AbstractCar;
 
 /**
  * @author VYZH
