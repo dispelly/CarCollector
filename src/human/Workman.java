@@ -1,12 +1,27 @@
 package human;
 
-public class Workman extends AbstractHuman {
+public class Workman extends AbstractHuman implements WorkmanPrototype{
     private String experience;
+    private String name;
 
-
-    public Workman(String name, int money,String experience) {
-        super(name, money);
+    public Workman(String name, String experience) {
+        super(name, experience);
         this.experience=experience;
+        this.name=name;
+    }
+
+    @Override
+    public String toString() {
+        return "Workman{" +
+                "experience='" + experience + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
+    @Override
+    public Object createPrototype() {
+        Workman copy=new Workman(name,experience);
+        return copy;
     }
 
     public String getExperience() {

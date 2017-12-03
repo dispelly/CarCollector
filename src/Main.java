@@ -1,5 +1,6 @@
 import car.AbstractCar;
 import detail.AbstractDetail;
+import human.Workman;
 import orders.CompletedOrder;
 import orders.ReplaceOrder;
 
@@ -15,7 +16,12 @@ public class Main {
      *
      */
     public static void main(String[] args) {
-	// write your code here
+        Workman originalWorker=new Workman("Sad","3");
+        System.out.println(originalWorker);
+
+        Workman clone=(Workman)originalWorker.createPrototype();
+        System.out.println(clone);
+
     }
 
 
