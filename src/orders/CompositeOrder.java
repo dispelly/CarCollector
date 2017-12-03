@@ -3,24 +3,31 @@ package orders;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author VYZH
- * @since 30.11.2017
- */
-public class CompositeOrder extends AbstractOrder {
 
-    private List<AbstractOrder> orders = new ArrayList<>();
+public class CompositeOrder extends AbstractOrder implements Order {
 
+    private List<Order> orderList = new ArrayList<>();
 
     public CompositeOrder(int priceForCar, int id) {
         super(priceForCar, id);
     }
 
-    public List<AbstractOrder> getOrders() {
-        return orders;
+    public void addOrder(Order order1) {
+        orderList.add(order1);
     }
 
-    public void setOrders(List<AbstractOrder> orders) {
-        this.orders = orders;
+    public void removeOrder(Order order1) {
+        orderList.remove(order1);
+    }
+
+    public List<Order> getOrders() {
+        return orderList;
+    }
+
+    @Override
+    public void getOrderName() {
+        for (Order order1 : orderList) {
+            order1.getOrderName();
+        }
     }
 }

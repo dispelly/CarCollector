@@ -2,7 +2,7 @@ package orders;
 
 import car.AbstractCar;
 
-public class ReplaceOrder extends AbstractOrder {
+public class ReplaceOrder extends AbstractOrder implements Order{
 
     private AbstractCar car;
     private String detailName;
@@ -33,4 +33,10 @@ public class ReplaceOrder extends AbstractOrder {
     public String getDetailName() {
         return detailName;
     }
+
+    @Override
+    public void getOrderName() {
+        System.out.println("Заказ на замену частей в машине");
+    }
+
 }

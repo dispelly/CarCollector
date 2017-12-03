@@ -6,12 +6,12 @@ import car.AbstractCar;
  * @author VYZH
  * @since 30.11.2017
  */
-public class CompletedOrder extends AbstractOrder {
+public class CompletedOrder extends AbstractOrder implements Order{
 
     private AbstractCar car;
     private long price;
 
-    public CompletedOrder(AbstractCar priceForCar, long id) {
+    public CompletedOrder(long priceForCar, long id) {
         super(priceForCar, id);
     }
 
@@ -29,5 +29,10 @@ public class CompletedOrder extends AbstractOrder {
 
     public void setPrice(long price) {
         this.price = price;
+    }
+
+    @Override
+    public void getOrderName() {
+        System.out.println("Выполненный заказ на машину");
     }
 }

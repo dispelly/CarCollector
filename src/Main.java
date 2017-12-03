@@ -33,7 +33,7 @@ public class Main {
         balance += oldDetail.getDetailPrice();
         balance -= newDetail.getDetailPrice();
 
-        return new CompletedOrder(car, balance);
+        return new CompletedOrder(balance, balance);
     }
 
 }
