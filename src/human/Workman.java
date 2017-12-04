@@ -1,13 +1,13 @@
 package human;
 
-public class Workman extends AbstractHuman implements WorkmanPrototype{
+public class Workman extends AbstractHuman implements WorkmanPrototype {
     private String experience;
     private String name;
 
     public Workman(String name, String experience) {
         super(name, experience);
-        this.experience=experience;
-        this.name=name;
+        this.experience = experience;
+        this.name = name;
     }
 
     @Override
@@ -20,7 +20,7 @@ public class Workman extends AbstractHuman implements WorkmanPrototype{
 
     @Override
     public Object createPrototype() {
-        Workman copy=new Workman(name,experience);
+        Workman copy = new Workman(name, experience);
         return copy;
     }
 

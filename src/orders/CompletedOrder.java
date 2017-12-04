@@ -1,25 +1,25 @@
 package orders;
 
-import car.AbstractCar;
+import car.Car;
 
 /**
  * @author VYZH
  * @since 30.11.2017
  */
-public class CompletedOrder extends AbstractOrder implements Order{
+public class CompletedOrder extends AbstractOrder implements Order {
 
-    private AbstractCar car;
+    private Car car;
     private long price;
 
     public CompletedOrder(long priceForCar, long id) {
         super(priceForCar, id);
     }
 
-    public AbstractCar getCar() {
+    public Car getCar() {
         return car;
     }
 
-    public void setCar(AbstractCar car) {
+    public void setCar(Car car) {
         this.car = car;
     }
 

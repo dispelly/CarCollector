@@ -1,8 +1,7 @@
-import car.AbstractCar;
-import detail.AbstractDetail;
-import human.Workman;
-import orders.CompletedOrder;
-import orders.ReplaceOrder;
+import car.Car;
+import car.HatchbackBuilder;
+import car.Director;
+import car.SedanBuilder;
 
 public class Main {
 
@@ -16,19 +15,23 @@ public class Main {
      *
      */
     public static void main(String[] args) {
-        Workman originalWorker=new Workman("Sad","3");
-        System.out.println(originalWorker);
+        Director directorH = new Director();
+        directorH.setBuilder(new HatchbackBuilder());
+        Car carH = directorH.BuildCar();
+        System.out.println(carH);
 
-        Workman clone=(Workman)originalWorker.createPrototype();
-        System.out.println(clone);
+        Director directorS = new Director();
+        directorS.setBuilder(new SedanBuilder());
+        Car carS = directorS.BuildCar();
+        System.out.println(carS);
 
     }
 
-
+/*
     Stock stock;
 
     public CompletedOrder doWork(ReplaceOrder ro) {
-        AbstractCar car = ro.getCar();
+        Car car = ro.getCar();
         String detailName = ro.getDetailName();
 
         AbstractDetail oldDetail = car.removeDetail(detailName);
@@ -41,5 +44,5 @@ public class Main {
 
         return new CompletedOrder(balance, balance);
     }
-
+*/
 }

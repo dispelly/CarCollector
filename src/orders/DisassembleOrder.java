@@ -1,6 +1,6 @@
 package orders;
 
-public class DisassembleOrder extends AbstractOrder implements Order{
+public class DisassembleOrder extends AbstractOrder implements Order {
     public DisassembleOrder(int priceForCar, int id) {
         super(priceForCar, id);
     }
