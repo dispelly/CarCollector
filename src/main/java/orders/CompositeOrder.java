@@ -25,9 +25,9 @@ public class CompositeOrder extends AbstractOrder implements Order {
     }
 
     @Override
-    public void getOrderName() {
+    public void printOrderName() {
         for (Order order1 : orderList) {
-            order1.getOrderName();
+            order1.printOrderName();
         }
     }
 }

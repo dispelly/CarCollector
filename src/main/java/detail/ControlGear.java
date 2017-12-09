@@ -4,6 +4,11 @@ public class ControlGear extends AbstractDetail {
     private int detailPrice;
     private String detailName;
 
+    public ControlGear(int detailPrice, String detailName) {
+        this.detailPrice = detailPrice;
+        this.detailName = detailName;
+    }
+
     @Override
     public void setDetailPrice() {
         this.detailPrice = detailPrice;
@@ -15,13 +20,16 @@ public class ControlGear extends AbstractDetail {
     }
 
     @Override
-    public String getDetail() {
+    public String getDetailName() {
         return this.detailName;
     }
 
+
     @Override
-    public String setDetail() {
-        detailName = "Коробка передач";
-        return detailName;
+    public String toString() {
+        return "ControlGear{" +
+                "detailPrice=" + detailPrice +
+                ", detailName='" + detailName + '\'' +
+                '}';
     }
 }

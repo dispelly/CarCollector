@@ -4,6 +4,11 @@ public class Engine extends AbstractDetail {
     private int detailPrice;
     private String detailName;
 
+    public Engine(int detailPrice, String detailName) {
+        this.detailPrice = detailPrice;
+        this.detailName = detailName;
+    }
+
     @Override
     public void setDetailPrice() {
         this.detailPrice = detailPrice;
@@ -15,13 +20,16 @@ public class Engine extends AbstractDetail {
     }
 
     @Override
-    public String getDetail() {
+    public String getDetailName() {
         return this.detailName;
     }
 
+
     @Override
-    public String setDetail() {
-        detailName = "Двигатель";
-        return detailName;
+    public String toString() {
+        return "Engine{" +
+                "detailPrice=" + detailPrice +
+                ", detailName='" + detailName + '\'' +
+                '}';
     }
 }

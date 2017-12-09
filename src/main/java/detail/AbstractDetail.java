@@ -11,12 +11,10 @@ public abstract class AbstractDetail {
         return detailPrice;
     }
 
-    String getDetail() {
+    public String getDetailName() {
         return detailName;
     }
 
-    String setDetail() {
-        return detailName;
-    }
+
 
 }

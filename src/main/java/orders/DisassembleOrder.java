@@ -6,7 +6,7 @@ public class DisassembleOrder extends AbstractOrder implements Order {
     }
 
     @Override
-    public void getOrderName() {
+    public void printOrderName() {
         System.out.println("Заказ на разборку машины");
     }
 }

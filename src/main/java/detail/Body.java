@@ -4,6 +4,11 @@ public class Body extends AbstractDetail {
     private int detailPrice;
     private String detailName;
 
+    public Body(int detailPrice, String detailName) {
+        this.detailPrice = detailPrice;
+        this.detailName = detailName;
+    }
+
     @Override
     public void setDetailPrice() {
         this.detailPrice = detailPrice;
@@ -15,13 +20,16 @@ public class Body extends AbstractDetail {
     }
 
     @Override
-    public String getDetail() {
+    public String getDetailName() {
         return this.detailName;
     }
 
+
     @Override
-    public String setDetail() {
-        detailName="Кузов";
-        return detailName;
+    public String toString() {
+        return "Body{" +
+                "detailPrice=" + detailPrice +
+                ", detailName='" + detailName + '\'' +
+                '}';
     }
 }

@@ -4,6 +4,11 @@ public class Painting extends AbstractDetail {
     private int detailPrice;
     private String detailName;
 
+    public Painting(int detailPrice, String detailName) {
+        this.detailPrice = detailPrice;
+        this.detailName = detailName;
+    }
+
     @Override
     public void setDetailPrice() {
         this.detailPrice = detailPrice;
@@ -15,13 +20,16 @@ public class Painting extends AbstractDetail {
     }
 
     @Override
-    public String getDetail() {
+    public String getDetailName() {
         return this.detailName;
     }
 
+
     @Override
-    public String setDetail() {
-        detailName = "Краска";
-        return detailName;
+    public String toString() {
+        return "Painting{" +
+                "detailPrice=" + detailPrice +
+                ", detailName='" + detailName + '\'' +
+                '}';
     }
 }

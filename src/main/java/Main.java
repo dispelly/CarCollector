@@ -35,14 +35,14 @@ public class Main {
         String detailName = ro.getDetailName();
 
         AbstractDetail oldDetail = car.removeDetail(detailName);
-        AbstractDetail newDetail = stock.getDetail(detailName);
+        AbstractDetail newDetail = stock.getDetailName(detailName);
         car.addDetail(newDetail);
 
         long balance = 0;
         balance += oldDetail.getDetailPrice();
         balance -= newDetail.getDetailPrice();
 
-        return new CompletedOrder(balance, balance);
+        return new CompletedOrder(car, balance);
     }
 */
 }

@@ -32,7 +32,7 @@ public class CompletedOrder extends AbstractOrder implements Order {
     }
 
     @Override
-    public void getOrderName() {
+    public void printOrderName() {
         System.out.println("Выполненный заказ на машину");
     }
 }
