@@ -19,7 +19,7 @@ public class Main {
         Stock stock = new DetailStock();
         System.out.println(stock.toString());
 
-     
+
 
     }
 

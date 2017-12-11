@@ -20,6 +20,9 @@ public class Car {
         return details.get(detailName);
     }
 
+    public Map<String, AbstractDetail> getAllDetails(){
+        return details;
+    }
 
     public void setBody(Body body) {
         addDetail(body);

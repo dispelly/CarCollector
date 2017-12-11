@@ -11,6 +11,10 @@ public abstract class AbstractOrder {
         this.car = car;
         this.priceForCar = priceForCar;
     }
+    public AbstractOrder(long priceForCar) {
+
+        this.priceForCar = priceForCar;
+    }
 
     public Car getCar() {
         return this.car;

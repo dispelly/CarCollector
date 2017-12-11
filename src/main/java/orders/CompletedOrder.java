@@ -4,15 +4,19 @@ import car.Car;
 import detail.AbstractDetail;
 import stock.Stock;
 
+import java.util.Map;
+
 public class CompletedOrder extends AbstractOrder implements Order {
 
     private Car car;
     private long price;
 
-    public CompletedOrder(Car car,long priceForCar) {
-        super(car,priceForCar);
+    public CompletedOrder(Car car, long priceForCar) {
+        super(car, priceForCar);
     }
-
+    public CompletedOrder(long priceForCar) {
+        super(priceForCar);
+    }
 
     public void setCar(Car car) {
         this.car = car;
@@ -36,7 +40,7 @@ public class CompletedOrder extends AbstractOrder implements Order {
     public CompletedOrder doReplace(ReplaceOrder ro) throws Exception {
         Car car = ro.getCar();
         String detailName = ro.getDetailName();
-        int price=0;
+        long price = 0;
 
         car.removeDetail(detailName);
         AbstractDetail newDetail = stock.getDetailFromStock(detailName);
@@ -49,10 +53,13 @@ public class CompletedOrder extends AbstractOrder implements Order {
 
     public CompletedOrder doDisassemble(DisassembleOrder ro) throws Exception {
         Car car = ro.getCar();
-        String detailName = ro.getDetailName();
-        int price=0;
+        long price=0;
+        Map<String, AbstractDetail> newdetails = car.getAllDetails();
+        for (Map.Entry<String, AbstractDetail> entry : newdetails.entrySet()) {
+               price+=entry.getValue().getDetailPrice();
+               stock.addDetailToStock(entry.getValue());
+        }
 
-
-        return new CompletedOrder(car, price);
+        return new CompletedOrder(price);
     }
 }
