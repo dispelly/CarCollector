@@ -1,6 +1,7 @@
 package detail;
 
 public class Engine extends AbstractDetail {
+
     private int detailPrice=50;
     private String detailName;
 

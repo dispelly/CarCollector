@@ -1,21 +1,20 @@
 package orders;
 
 import car.Car;
+import detail.AbstractDetail;
+import stock.Stock;
 
 public class ReplaceOrder extends AbstractOrder implements Order{
 
     private Car car;
     private String detailName;
-    private int numberOfDetails;
+    private long priceForCar;
 
-    public ReplaceOrder(Car car,long priceForCar) {
+    public ReplaceOrder(Car car,long priceForCar,String detailName) {
         super(car,priceForCar);
+        this.detailName=detailName;
     }
 
-
-    public Car getCar() {
-        return car;
-    }
 
     public void setCar(Car car) {
         this.car = car;
@@ -29,5 +28,6 @@ public class ReplaceOrder extends AbstractOrder implements Order{
     public void printOrderName() {
         System.out.println("Заказ на замену частей в машине");
     }
+
 
 }

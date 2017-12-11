@@ -1,11 +1,9 @@
 package orders;
 
 import car.Car;
+import detail.AbstractDetail;
+import stock.Stock;
 
-/**
- * @author VYZH
- * @since 30.11.2017
- */
 public class CompletedOrder extends AbstractOrder implements Order {
 
     private Car car;
@@ -15,9 +13,6 @@ public class CompletedOrder extends AbstractOrder implements Order {
         super(car,priceForCar);
     }
 
-    public Car getCar() {
-        return car;
-    }
 
     public void setCar(Car car) {
         this.car = car;
@@ -34,5 +29,30 @@ public class CompletedOrder extends AbstractOrder implements Order {
     @Override
     public void printOrderName() {
         System.out.println("Выполненный заказ на машину");
+    }
+
+    Stock stock;
+
+    public CompletedOrder doReplace(ReplaceOrder ro) throws Exception {
+        Car car = ro.getCar();
+        String detailName = ro.getDetailName();
+        int price=0;
+
+        car.removeDetail(detailName);
+        AbstractDetail newDetail = stock.getDetailFromStock(detailName);
+        car.addDetail(newDetail);
+        stock.removeDetailFromStock(detailName);
+        price = newDetail.getDetailPrice();
+
+        return new CompletedOrder(car, price);
+    }
+
+    public CompletedOrder doDisassemble(DisassembleOrder ro) throws Exception {
+        Car car = ro.getCar();
+        String detailName = ro.getDetailName();
+        int price=0;
+
+
+        return new CompletedOrder(car, price);
     }
 }

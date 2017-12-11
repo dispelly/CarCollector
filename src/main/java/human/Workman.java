@@ -1,6 +1,7 @@
 package human;
 
 public class Workman extends AbstractHuman implements WorkmanPrototype {
+
     private String experience;
     private String name;
 

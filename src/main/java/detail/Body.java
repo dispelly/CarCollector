@@ -3,6 +3,7 @@ package detail;
 import javax.xml.soap.Detail;
 
 public class Body extends AbstractDetail {
+
     private int detailPrice=50;
     private String detailName;
 
@@ -19,10 +20,6 @@ public class Body extends AbstractDetail {
     @Override
     public String getDetailName() {
         return this.detailName;
-    }
-
-    public AbstractDetail getDetail(AbstractDetail detail){
-        return new Body(this.detailPrice,this.detailName);
     }
 
     @Override

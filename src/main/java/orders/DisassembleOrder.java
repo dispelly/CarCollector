@@ -4,16 +4,13 @@ import car.Car;
 import detail.AbstractDetail;
 
 public class DisassembleOrder extends AbstractOrder implements Order {
+
     private Car car;
     private String detailName;
 
 
     public DisassembleOrder (Car car, long priceForCar) {
         super(car,priceForCar);
-    }
-
-    public Car getCar() {
-        return car;
     }
 
     public void setCar(Car car) {

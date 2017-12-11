@@ -1,6 +1,7 @@
 package car;
 
 public abstract class CarBuilder {
+
     Car car;
 
     void createCar() {

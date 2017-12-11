@@ -3,6 +3,7 @@ package human;
 import car.Car;
 
 public class Visitor extends AbstractHuman {
+
     Car car;
     private int money;
     private String name;

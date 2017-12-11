@@ -2,22 +2,20 @@ package stock;
 
 import detail.*;
 
-
 public interface Stock {
+
     AbstractDetail getDetailFromStock(String detailName);
+
     void removeDetailFromStock(String detailName);
+
     void addDetailToStock(AbstractDetail detail);
 
+    void templateAddCarDetailtoStock();
 
-    void addBody(Body body);
+    void addFullHatchBacktoStock();
 
-    void addControlGear(ControlGear controlGear);
+    void addFullSedantoStock();
 
-    void addEngine(Engine engine);
-
-    void addPainting(Painting painting);
-
-    void addTransmission(Transmission transmission);
-
+    public void addFullUniversaltoStock();
 
 }

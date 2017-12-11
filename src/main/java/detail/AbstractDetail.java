@@ -1,6 +1,7 @@
 package detail;
 
 public abstract class AbstractDetail {
+
     private int detailPrice;
     private String detailName;
 
