@@ -1,20 +1,20 @@
-import car.Car;
-import car.HatchbackBuilder;
-import car.Director;
-import car.SedanBuilder;
+import detail.*;
+import orders.*;
+import stock.*;
+import car.*;
 
 public class Main {
 
     /*
      * Order -> Station
      * Order contains list of details
-     * Station check list of details for availability in Stock, Stock return details
+     * Station check list of details for availability in stock.Stock, stock.Stock return details
      *
-     * Stock removes returned details from internal list
+     * stock.Stock removes returned details from internal list
      *
      *
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         Director directorH = new Director();
         directorH.setBuilder(new HatchbackBuilder());
         Car carH = directorH.BuildCar();
@@ -27,22 +27,34 @@ public class Main {
 
     }
 
-/*
+
     Stock stock;
 
-    public CompletedOrder doWork(ReplaceOrder ro) {
+    public CompletedOrder doReplace(ReplaceOrder ro) throws Exception {
         Car car = ro.getCar();
         String detailName = ro.getDetailName();
+        int price=0;
+        AbstractDetail oldDetail = car.getDetail(detailName);
 
-        AbstractDetail oldDetail = car.removeDetail(detailName);
-        AbstractDetail newDetail = stock.getDetailName(detailName);
+        car.removeDetail(detailName);
+        AbstractDetail newDetail = stock.getDetailFromStock(detailName);
         car.addDetail(newDetail);
+        stock.removeDetailFromStock(detailName);
+        price = newDetail.getDetailPrice();
 
-        long balance = 0;
-        balance += oldDetail.getDetailPrice();
-        balance -= newDetail.getDetailPrice();
-
-        return new CompletedOrder(car, balance);
+        return new CompletedOrder(car, price);
     }
-*/
+
+    public CompletedOrder doDisassemble(DisassembleOrder ro) throws Exception {
+        Car car = ro.getCar();
+        String detailName = ro.getDetailName();
+        int price=0;
+
+
+        return new CompletedOrder(car, price);
+    }
+
+
+
+
 }

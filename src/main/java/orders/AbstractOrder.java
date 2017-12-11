@@ -1,11 +1,13 @@
 package orders;
+import car.*;
 
 public abstract class AbstractOrder {
     private long priceForCar;
-    private long id;
+    private Car car;
 
-    public AbstractOrder(long priceForCar, long id) {
+    public AbstractOrder(Car car,long priceForCar) {
+        this.car=car;
         this.priceForCar = priceForCar;
-        this.id = id;
+
     }
 }

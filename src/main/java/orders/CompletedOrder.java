@@ -11,8 +11,8 @@ public class CompletedOrder extends AbstractOrder implements Order {
     private Car car;
     private long price;
 
-    public CompletedOrder(long priceForCar, long id) {
-        super(priceForCar, id);
+    public CompletedOrder(Car car,long priceForCar) {
+        super(car,priceForCar);
     }
 
     public Car getCar() {

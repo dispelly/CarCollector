@@ -1,5 +1,7 @@
 package orders;
 
+import car.Car;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,8 +10,8 @@ public class CompositeOrder extends AbstractOrder implements Order {
 
     private List<Order> orderList = new ArrayList<>();
 
-    public CompositeOrder(int priceForCar, int id) {
-        super(priceForCar, id);
+    public CompositeOrder(Car car, long priceForCar) {
+        super(car,priceForCar);
     }
 
     public void addOrder(Order order1) {

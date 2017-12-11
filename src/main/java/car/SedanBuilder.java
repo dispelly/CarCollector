@@ -6,27 +6,27 @@ public class SedanBuilder extends CarBuilder {
 
     @Override
     void buildBody() {
-        car.setBody(new Body(50,"Кузов Седана"));
+        car.setBody(new Body(40,"Кузов Седана"));
     }
 
     @Override
     void buildControlGear() {
-        car.setControlGear(new ControlGear(75,"Руль Седана"));
+        car.setControlGear(new ControlGear(65,"Руль Седана"));
     }
 
     @Override
     void buildEngine() {
-        car.setEngine(new Engine(75,"Двигатель Седана"));
+        car.setEngine(new Engine(100,"Двигатель Седана"));
     }
 
     @Override
     void buildPainting() {
-        car.setPainting(new Painting(75,"Окраска Седана"));
+        car.setPainting(new Painting(80,"Окраска Седана"));
     }
 
     @Override
     void buildTransmission() {
-        car.setTransmission(new Transmission(75,"Трансмиссия Седана"));
+        car.setTransmission(new Transmission(110,"Трансмиссия Седана"));
     }
 
 }

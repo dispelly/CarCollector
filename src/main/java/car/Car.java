@@ -1,7 +1,6 @@
 package car;
 
 import detail.*;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,16 +8,17 @@ public class Car {
 
     private Map<String, AbstractDetail> details = new HashMap<>();
 
-    public void addDetail(AbstractDetail detail){
-        details.put(detail.getDetailName(),detail);
+    public void addDetail(AbstractDetail detail) {
+        details.put(detail.getDetailName(), detail);
     }
 
-    public void removeDetail(String detailName){
+    public void removeDetail(String detailName) {
         details.remove(detailName);
     }
 
-
-
+    public AbstractDetail getDetail(String detailName) {
+        return details.get(detailName);
+    }
 
 
     public void setBody(Body body) {
@@ -41,10 +41,11 @@ public class Car {
         addDetail(transmission);
     }
 
+
     @Override
     public String toString() {
-        StringBuilder stringBuilder=new StringBuilder();
-        for (Map.Entry<String,AbstractDetail> entry: details.entrySet()){
+        StringBuilder stringBuilder = new StringBuilder();
+        for (Map.Entry<String, AbstractDetail> entry : details.entrySet()) {
             stringBuilder.append(entry.getKey()).append("=").append(entry.getValue()).append("\n");
         }
         return stringBuilder.toString();

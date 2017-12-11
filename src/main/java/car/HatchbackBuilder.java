@@ -16,17 +16,17 @@ public class HatchbackBuilder extends CarBuilder {
 
     @Override
     void buildEngine() {
-        car.setEngine(new Engine(75,"Двигатель Хэтчбека"));
+        car.setEngine(new Engine(100,"Двигатель Хэтчбека"));
     }
 
     @Override
     void buildPainting() {
-        car.setPainting(new Painting(75,"Окраска Хэтчбека"));
+        car.setPainting(new Painting(80,"Окраска Хэтчбека"));
     }
 
     @Override
     void buildTransmission() {
-        car.setTransmission(new Transmission(75,"Трансмиссия Хэтчбека"));
+        car.setTransmission(new Transmission(60,"Трансмиссия Хэтчбека"));
     }
 
 

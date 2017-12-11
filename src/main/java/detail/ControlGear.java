@@ -1,17 +1,12 @@
 package detail;
 
 public class ControlGear extends AbstractDetail {
-    private int detailPrice;
+    private int detailPrice=50;
     private String detailName;
 
     public ControlGear(int detailPrice, String detailName) {
         this.detailPrice = detailPrice;
         this.detailName = detailName;
-    }
-
-    @Override
-    public void setDetailPrice() {
-        this.detailPrice = detailPrice;
     }
 
     @Override

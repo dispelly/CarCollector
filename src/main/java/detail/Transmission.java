@@ -1,7 +1,7 @@
 package detail;
 
 public class Transmission extends AbstractDetail {
-    private int detailPrice;
+    private int detailPrice=50;
     private String detailName;
 
     public Transmission(int detailPrice, String detailName) {
@@ -9,10 +9,6 @@ public class Transmission extends AbstractDetail {
         this.detailName = detailName;
     }
 
-    @Override
-    public void setDetailPrice() {
-        this.detailPrice = detailPrice;
-    }
 
     @Override
     public int getDetailPrice() {

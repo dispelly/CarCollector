@@ -1,7 +1,7 @@
 package detail;
 
 public class Painting extends AbstractDetail {
-    private int detailPrice;
+    private int detailPrice=50;
     private String detailName;
 
     public Painting(int detailPrice, String detailName) {
@@ -9,10 +9,6 @@ public class Painting extends AbstractDetail {
         this.detailName = detailName;
     }
 
-    @Override
-    public void setDetailPrice() {
-        this.detailPrice = detailPrice;
-    }
 
     @Override
     public int getDetailPrice() {

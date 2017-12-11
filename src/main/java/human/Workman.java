@@ -5,9 +5,8 @@ public class Workman extends AbstractHuman implements WorkmanPrototype {
     private String name;
 
     public Workman(String name, String experience) {
-        super(name, experience);
-        this.experience = experience;
-        this.name = name;
+        super(name);
+        this.experience=experience;
     }
 
     @Override
