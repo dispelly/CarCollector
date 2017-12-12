@@ -1,5 +1,7 @@
 package detail;
-
+/**
+ * Class of engine.
+ */
 public class ControlGear extends AbstractDetail {
 
     private int detailPrice=50;

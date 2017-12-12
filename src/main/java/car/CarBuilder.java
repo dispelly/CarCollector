@@ -1,5 +1,7 @@
 package car;
-
+/**
+ * The builder, creates machines with the specified details.
+ */
 public abstract class CarBuilder {
 
     Car car;

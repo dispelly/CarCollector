@@ -1,5 +1,7 @@
 package detail;
-
+/**
+ * Engine class.
+ */
 public class Engine extends AbstractDetail {
 
     private int detailPrice=50;

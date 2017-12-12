@@ -1,5 +1,7 @@
 package detail;
-
+/**
+ * Abstract class for details.
+ */
 public abstract class AbstractDetail {
 
     private int detailPrice;

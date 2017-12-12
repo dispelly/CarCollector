@@ -2,6 +2,9 @@ package orders;
 
 import car.*;
 
+/**
+ * Abstract class of orders.
+ */
 public abstract class AbstractOrder {
 
     private long priceForCar;

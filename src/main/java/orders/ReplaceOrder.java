@@ -4,8 +4,14 @@ import car.Car;
 import detail.AbstractDetail;
 import stock.Stock;
 
+/**
+ * The class of the order for replacement of parts.
+ */
 public class ReplaceOrder extends AbstractOrder implements Order{
-
+    /**
+     * @param detailName Part name for replacement
+     *
+     */
     private Car car;
     private String detailName;
     private long priceForCar;
@@ -24,9 +30,12 @@ public class ReplaceOrder extends AbstractOrder implements Order{
         return detailName;
     }
 
+    /**
+     * Prints the order type.
+     */
     @Override
     public void printOrderName() {
-        System.out.println("Заказ на замену частей в машине");
+        System.out.println("Order for replacement parts in the car");
     }
 
 

@@ -1,7 +1,8 @@
 package detail;
 
-import javax.xml.soap.Detail;
-
+/**
+ * Class of body.
+ */
 public class Body extends AbstractDetail {
 
     private int detailPrice=50;

@@ -1,7 +1,9 @@
 package car;
 
 import detail.*;
-
+/**
+ * A class for building a Hatchback car with specified details and their price.
+ */
 public class HatchbackBuilder extends CarBuilder {
 
     @Override

@@ -1,5 +1,8 @@
 package human;
 
+/**
+ * Abstract class of people.
+ */
 public abstract class AbstractHuman {
 
     private String name;
@@ -12,9 +15,17 @@ public abstract class AbstractHuman {
         return name;
     }
 
+    /**
+     * Set the name with a blank check.
+     * @param name - The name of the current person.
+     */
     public void setName(String name) {
-        if (name != null)
-            this.name = name;
+        try {
+            if (name != null)
+                this.name = name;
+        }catch (IllegalArgumentException e){
+            System.out.println("Name can not be empty");}
+
     }
 
 

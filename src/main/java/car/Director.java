@@ -1,7 +1,9 @@
 package car;
 
 import car.*;
-
+/**
+ * The class manager for the template is the creator of the machines.
+ */
 public class Director {
 
     CarBuilder builder;

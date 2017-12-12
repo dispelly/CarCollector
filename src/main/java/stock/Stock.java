@@ -2,6 +2,10 @@ package stock;
 
 import detail.*;
 
+/**
+ * Interface for interaction with the warehouse.
+ */
+
 public interface Stock {
 
     AbstractDetail getDetailFromStock(String detailName);
@@ -16,6 +20,6 @@ public interface Stock {
 
     void addFullSedantoStock();
 
-    public void addFullUniversaltoStock();
+    void addFullUniversaltoStock();
 
 }

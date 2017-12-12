@@ -1,5 +1,7 @@
 package detail;
-
+/**
+ * Class details painting.
+ */
 public class Painting extends AbstractDetail {
 
     private int detailPrice=50;

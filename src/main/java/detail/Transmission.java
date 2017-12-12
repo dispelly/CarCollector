@@ -1,5 +1,8 @@
 package detail;
 
+/**
+ * Class of a detail transmission.
+ */
 public class Transmission extends AbstractDetail {
 
     private int detailPrice=50;
